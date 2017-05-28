@@ -1,0 +1,49 @@
+@import "../../config/globals";
+
+.todos-actions-bar {
+    padding: $offset $offset_3x;
+    @include clearfix();
+    text-align: center;
+    }
+
+    .todos-actions-bar_counter {
+        font-family: $font-main;
+        font-size: $fs_little;
+        line-height: $lh_little;
+        font-weight: 200;
+        padding: $offset_half 0;
+        float: left;
+        margin: $offset_2x $offset_4x $offset_2x 0;
+        }
+
+    .todos-filters {
+        white-space: nowrap;
+        display: inline-block;
+        margin: $offset_2x 0;
+        }
+        .todos-actions-bar .todos-filters {
+            //text-align: center;
+            }
+
+        .todos-filters .filter {
+            margin: 0 $offset;
+            }
+            .todos-filters .filter:first-child {
+                margin-left: 0;
+                }
+            .todos-filters .filter:last-child {
+                margin-right: 0;
+                }
+
+    .todos-actions-bar_clear-completed {
+        font-family: $font-main;
+        font-size: $fs_little;
+        line-height: $lh_little;
+        font-weight: 200;
+        margin: $offset_2x 0 $offset_2x $offset_4x;
+        padding: $offset_half 0;
+        border: none;
+        background: 0;
+        outline: none;
+        float: right;
+        }

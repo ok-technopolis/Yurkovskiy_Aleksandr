@@ -1,0 +1,39 @@
+@import "../../config/globals";
+
+.todos-main {
+    background: $c-todos-main-bg;
+    box-shadow: 0 2px 4px rgba(#000, .2);
+    position: relative;
+    }
+    .todos-main:before,
+    .todos-main:after {
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(#000, .2);
+        top: 100%;
+        z-index: -1;
+        }
+    .todos-main:before {
+        height: 8px;
+        left: 4px;
+        right: 4px;
+        }
+    .todos-main:after {
+        height: 4px;
+        left: 2px;
+        right: 2px;
+        }
+    .todos-main.__has-todos:before,
+    .todos-main.__has-todos:after {
+        content: '';
+        }
+
+    .todos-main .todos-list,
+    .todos-main .todos-actions-bar {
+        display: none;
+        }
+        .todos-main.__has-todos .todos-list,
+        .todos-main.__has-todos .todos-actions-bar {
+            display: block;
+            }
+

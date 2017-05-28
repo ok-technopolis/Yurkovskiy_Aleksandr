@@ -1,0 +1,10 @@
+@import "../../config/globals";
+
+.todos-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 100px;
+    font-weight: 100;
+    text-transform: lowercase;
+    text-align: center;
+    color: $c-title;
+    }

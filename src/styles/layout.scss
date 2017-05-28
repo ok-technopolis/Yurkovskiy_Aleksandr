@@ -1,0 +1,10 @@
+@import "./config/globals";
+
+body {
+    background: $c-main-bg;
+    }
+
+.main-wrapper {
+    width: $main-wrapper-width;
+    margin: 0 auto;
+    }

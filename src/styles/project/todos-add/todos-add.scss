@@ -1,0 +1,71 @@
+@import "../../config/globals";
+
+.todos-add {
+    height: 64px;
+    @include clearfix();
+    }
+
+    .todo-add_select-all-action {
+        width: 24px;
+        height: 24px;
+        float: left;
+        margin: $offset_5x 0 0 $offset_4x;
+        opacity: 0;
+        transition: opacity .2s;
+        }
+        .todos-main .todo-add_select-all-action {
+            visibility: hidden;
+            }
+            .todos-main.__has-todos .todo-add_select-all-action {
+                visibility: visible;
+                opacity: 1;
+                }
+
+        .todo-add_select-all-action .action_visual {
+            width: 24px;
+            height: 12px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            }
+            .todo-add_select-all-action .action_visual:before,
+            .todo-add_select-all-action .action_visual:after {
+                content: '';
+                position: absolute;
+                height: 3px;
+                background: #737373;
+                width: 100%;
+                }
+            .todo-add_select-all-action .action_visual:before {
+                transform: rotate(32.5deg);
+                left: -9px;
+                top: 2px;
+                }
+            .todo-add_select-all-action .action_visual:after {
+                transform: rotate(-32.5deg);
+                left: 9px;
+                top: 2px;
+                }
+
+    .todo-add_input-w {
+        overflow: hidden;
+        }
+
+        .todo-add_input {
+            width: 100%;
+            box-sizing: border-box;
+            font-size: $fs_xx-large;
+            height: 64px;
+            padding: $offset_4x;
+            border: 0;
+            outline: 0;
+            font-weight: 300;
+            color: $c-gray;
+
+            @include placeholder() {
+                color: $c-ultra-light;
+                }
+            }
+
+
