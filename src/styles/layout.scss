@@ -5,6 +5,7 @@ body {
     }
 
 .main-wrapper {
-    width: $main-wrapper-width;
+    max-width: $main-wrapper-width;
+    min-width: $main-wrapper-min-width;
     margin: 0 auto;
     }

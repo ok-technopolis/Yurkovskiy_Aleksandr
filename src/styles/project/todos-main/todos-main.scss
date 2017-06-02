@@ -4,6 +4,7 @@
     background: $c-todos-main-bg;
     box-shadow: 0 2px 4px rgba(#000, .2);
     position: relative;
+    margin: 0 $offset_4x $offset_4x;
     }
     .todos-main:before,
     .todos-main:after {
