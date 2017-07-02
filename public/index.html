@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./dist/styles/default.css" />
     <title>Todos</title>
-    <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/bundle.js"></script>
 </head>
 <script type="text/html" id="todoItemTemplate">
     <div class="todo-item">
@@ -48,26 +48,23 @@
             </div>
         </div>
 
-        <div class="todos-list js-todos-list">
-
-        </div>
-
+        <div class="todos-list js-todos-list"></div>
 
         <div class="todos-actions-bar">
 
-            <div class="todos-actions-bar_counter"
+            <div class="todos-actions-bar_counter js-todos-actions-bar_counter"
                  aria-label="Количество не сделанных todo">
                 2 задачи
             </div>
 
-            <button class="todos-actions-bar_clear-completed js-todos-remove-completed">Удалить завершённые</button>
+            <button class="todos-actions-bar_clear-completed js-todos-actions-bar_clear-completed">Удалить завершённые</button>
 
-            <div class="todos-filters ">
-                <button class="filter js-todos-filter-item-all __active" data-filter="all"
-                        aria-label="Фильтр: показать все">Все</button>
-                <button class="filter js-todos-filter-item-unready" data-filter="unready"
-                        aria-label="Фильтр: показать невыполненные">Невыполненные</button>
-                <button class="filter js-todos-filter-item-ready" data-filter="ready"
+            <div class="todos-filters js-todos-actions-bar_filter">
+                <button class="filter __active" data-filter="all"
+                        aria-label="Фильтр: показать все">Все</button><!--
+                --><button class="filter" data-filter="unready"
+                        aria-label="Фильтр: показать невыполненные">Невыполненные</button><!--
+                --><button class="filter" data-filter="ready"
                         aria-label="Фильтр: показать выполненные">Выполненные</button>
             </div>
 

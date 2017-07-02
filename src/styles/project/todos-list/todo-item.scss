@@ -23,10 +23,16 @@
             }
         }
     }
-    .todo-item:first-child {
+    .todo-item.__hide {
+        display: none;
+        }
+    .todo-item:first-child,
+    .todo-item.__hide:first-child ~ .todo-item {
         border-top: 1px solid $c-common-border;
         }
-
+    .todo-item.__hide:first-child ~ .todo-item:not(.__hide) ~ .todo-item {
+        border-top: 0;
+        }
 
     .todo-item_ready-checker {
         float: left;

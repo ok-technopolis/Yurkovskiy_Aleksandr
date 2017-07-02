@@ -13,7 +13,7 @@
         opacity: 0;
         transition: opacity .2s;
         }
-        .todos-main .todo-add_select-all-action {
+        .todo-add_select-all-action {
             visibility: hidden;
             }
             .todos-main.__has-todos .todo-add_select-all-action {
@@ -65,6 +65,7 @@
 
             @include placeholder() {
                 color: $c-ultra-light;
+                font-style: italic;
                 }
             }
 
