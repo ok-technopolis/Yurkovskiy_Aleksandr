@@ -10,6 +10,7 @@ const todoMainComponentConstructorPrototype = TodoMainConstructor.prototype;
 todoMainComponentConstructorPrototype.showFullInterface = function () {
     this._todosMain.classList.add(FULL_INTERFACE_MODIFICATOR);
     return this;
+
 };
 
 todoMainComponentConstructorPrototype.hideFullInterface = function () {
