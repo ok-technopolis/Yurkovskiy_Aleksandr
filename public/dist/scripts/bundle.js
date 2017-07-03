@@ -676,7 +676,8 @@ function TodoItemConstructor(itemData) {
     this._markReady.addEventListener('change', this);
     this._removeAction.addEventListener('click', this);
     this._text.addEventListener('input', this);
-    this._text.addEventListener('keypress', this)
+    this._text.addEventListener('keypress', this);
+    this._text.addEventListener('blur', this);
 }
 
 extendConstructor(TodoItemConstructor, Eventable);
@@ -710,12 +711,15 @@ todoItemConstructorPrototype.handleEvent = function (e) {
             break;
         case 'keypress':
             if (e.keyCode === ENTER_KEY_CODE) {
-                const text = this._text.innerText.trim();
-                if(text.length === 0){
+                if(this._text.innerText.trim().length === 0){
                     this.remove();
                 }
             }
-
+            break;
+        case 'blur':
+            if(this._text.innerText.trim().length === 0){
+                this.remove();
+            }
             break;
     }
 };

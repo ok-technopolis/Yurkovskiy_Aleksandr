@@ -5,7 +5,7 @@ const templatesEngine = require('../modules/templatesEngine');
 const READY_MODIFICATOR = '__ready';
 const HIDDEN_MODIFICATOR = '__hide';
 
-
+const ENTER_KEY_CODE = 13;
 
 /**
  * @param itemData
@@ -37,7 +37,8 @@ function TodoItemConstructor(itemData) {
     this._markReady.addEventListener('change', this);
     this._removeAction.addEventListener('click', this);
     this._text.addEventListener('input', this);
-    this._text.addEventListener('keypress', this)
+    this._text.addEventListener('keypress', this);
+    this._text.addEventListener('blur', this);
 }
 
 extendConstructor(TodoItemConstructor, Eventable);
@@ -68,6 +69,18 @@ todoItemConstructorPrototype.handleEvent = function (e) {
             break;
         case 'input':
             this.setText(this._text.innerText);
+            break;
+        case 'keypress':
+            if (e.keyCode === ENTER_KEY_CODE) {
+                if(this._text.innerText.trim().length === 0){
+                    this.remove();
+                }
+            }
+            break;
+        case 'blur':
+            if(this._text.innerText.trim().length === 0){
+                this.remove();
+            }
             break;
     }
 };
